@@ -71,6 +71,19 @@ body {
     }
 }
 
+.btn-lemon {
+    background-color: #E9FF70;
+    border-color: #E9FF70;
+    color: #000;
+    /* Black text for better contrast */
+}
+
+.btn-lemon:hover {
+    background-color: #D9EF60;
+    border-color: #D9EF60;
+}
+
+
 
 
 /* ========== SERVICE CARDS ========== */

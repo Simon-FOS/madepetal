@@ -49,21 +49,70 @@
 
     <!-- ========== HERO SECTION ========== -->
     <!-- Hero Section with Background Image -->
-    <header class="hero-section"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('static/img/mp5.jpg') center/cover no-repeat;">
-        <div class="container h-100 d-flex align-items-center">
-            <div class="hero-text text-white">
-                <h1 class="display-4 fw-bold">Revitalize Your Senses</h1>
-                <p class="lead">Wellness Begins With You</p>
-                <a href="contact.html" class="btn btn-primary btn-lg mt-3">Take the First Step</a>
+    <header class="hero-section">
+        <!-- Carousel -->
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active" data-bs-interval="3000"
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('static/img/mp5.jpg') center/cover no-repeat; height: 100vh;">
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-text text-white">
+                            <h1 class="display-4 fw-bold">Revitalize Your Senses</h1>
+                            <p class="lead">Wellness Begins With You</p>
+                            <a href="contact.html" class="btn btn-lemon btn-lg mt-3">Take the First Step</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" data-bs-interval="3000"
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('static/img/PDO.jpg') center/cover no-repeat; height: 100vh;">
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-text text-white">
+                            <h1 class="display-4 fw-bold">Find Your Balance</h1>
+                            <p class="lead">Harmony for Body and Mind</p>
+                            <a href="services.html" class="btn btn-lemon btn-lg mt-3">Explore Services</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" data-bs-interval="3000"
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('static/img/prodt.jpg') center/cover no-repeat; height: 100vh;">
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-text text-white">
+                            <h1 class="display-4 fw-bold">Professional Care</h1>
+                            <p class="lead">Expert Practitioners Ready to Help</p>
+                            <a href="team.html" class="btn btn-lemon btn-lg mt-3">Meet Our Team</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item" data-bs-interval="3000"
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('static/img/fatd2.jpeg') center/cover no-repeat; height: 100vh;">
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-text text-white">
+                            <h1 class="display-4 fw-bold">Special Offers</h1>
+                            <p class="lead">Exclusive Packages for New Clients</p>
+                            <a href="offers.html" class="btn btn-lemon btn-lg mt-3">View Offers</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- About Us Section -->
-    <section class="py-5 bg-dark bg-opacity-75 text-white"
-        style="background: url('static/img/mp2.jpg') center/cover fixed;">
-        <div class="container">
+    <section class="position-relative vh-100 overflow-hidden">
+        <!-- Background image with overlay - Pure Bootstrap -->
+        <div class="w-100 h-100 position-absolute top-0 start-0 
+                bg-dark bg-opacity-75" style="background: url('static/img/mp2.jpg') center/cover fixed;">
+        </div>
+
+        <!-- Content -->
+        <div class="container position-relative py-5 h-100 d-flex align-items-center text-white" style="z-index: 1;">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <h2 class="mb-4 text-center">Welcome to MadePetal Clinic and Spa</h2>
@@ -84,7 +133,7 @@
                             Stay connected with us for exclusive promotions, last-minute appointment openings, and
                             special announcements by following our social media pages.
                         </p>
-                        <p class="mb-4 font-weight-bold text-center">
+                        <p class="mb-4 fw-bold text-center">
                             📲 Follow us: @MadePetalClinicSpa
                         </p>
                         <p class="mb-4">
@@ -274,58 +323,57 @@
                 <a href="#" class="btn btn-primary">View All Products</a>
             </div>
         </div>
-        </style>
 
 
-
-
-        <!-- ========== FOOTER ========== -->
-        <!-- Bootstrap Footer with multiple columns -->
-        <footer class="bg-dark text-white py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h5>MadePetal Clinic & Spa</h5>
-                        <p class="mb-4">Your oasis of relaxation and rejuvenation.
-
-                            <!-- Social Media Icons -->
-                        <div class="mt-4 pt-3">
-                            <a href="https://www.instagram.com/yourprofile" class="text-white me-3" target="_blank">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                            <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </a>
-                            <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
-                                <i class="fab fa-whatsapp fa-2x"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@yourprofile" class="text-white" target="_blank">
-                                <i class="fab fa-tiktok fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Quick Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Home</a></li>
-                            <li><a href="services.html" class="text-white">Services</a></li>
-                            <li><a href="contact.html" class="text-white">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Contact Us</h5>
-                        <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank,
-                            Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
-                        <p><i class="fas fa-phone me-2"></i> 08130586133</p>
-                    </div>
-                </div>
-                <hr class="mt-4"> <!-- Added mt-4 to create space above the line -->
-                <p class="text-center mb-0">&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</p>
-            </div>
-        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Custom JS -->
         <script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<!-- ========== FOOTER ========== -->
+<!-- Bootstrap Footer with multiple columns -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>MadePetal Clinic & Spa</h5>
+                <p class="mb-4">Your oasis of relaxation and rejuvenation.
+
+                    <!-- Social Media Icons -->
+                <div class="mt-4 pt-3">
+                    <a href="https://www.instagram.com/yourprofile" class="text-white me-3" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@yourprofile" class="text-white" target="_blank">
+                        <i class="fab fa-tiktok fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Home</a></li>
+                    <li><a href="services.html" class="text-white">Services</a></li>
+                    <li><a href="contact.html" class="text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank,
+                    Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
+                <p><i class="fas fa-phone me-2"></i> 08130586133</p>
+            </div>
+        </div>
+        <hr class="mt-4">
+        <p class="text-center mb-0">&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</p>
+    </div>
+</footer>
 
 </html>
