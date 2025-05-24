@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadePetal Products | Premium Skincare & Beauty Products</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="static/js/meen.js"></script>
+</head>
+
+<body class="bg-light">
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #E9FF70 !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/img/mp8.png" alt="MadePetal Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #E9FF70;">
+                            <li><a class="dropdown-item" href="#">BEAUTY & COSMETIC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">SPA & MASSAGE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">WELLNESS & HOLISTIC SERVICES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">ADVANCED AESTHETICS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link active fw-medium text-dark" href="/product.html">Products</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/blog.html">Updates</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ps-2 d-flex align-items-center">
+                        <button class="btn btn-link position-relative p-0" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasCart">
+                            <i class="fas fa-shopping-cart fa-lg text-dark"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PRODUCT SHOP ========== -->
+    <main class="container py-5 mt-4">
+        <!-- Page Header -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="display-5 fw-bold text-dark">MadePetal Beauty Products</h1>
+                <p class="lead text-muted">Premium skincare and beauty products crafted with care</p>
+            </div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <ul class="nav nav-pills justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active bg-pink text-white" href="#" data-category="all">All Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#" data-category="skincare">Skincare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#" data-category="haircare">Haircare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#" data-category="bodycare">Bodycare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#" data-category="fragrance">Fragrance</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Search and Sort -->
+        <div class="row mb-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search products..." id="searchInput">
+                    <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <select class="form-select" id="sortSelect">
+                    <option value="default">Sort by: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row g-4" id="productGrid">
+            <!-- Product 1 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x16.jpg" class="card-img-top" alt="Hydrating Face Serum">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Hydrating Face Serum</h5>
+                        <p class="card-text text-danger fw-bold">₦4,850.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="1">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x12.jpg" class="card-img-top" alt="Revitalizing Eye Cream">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Revitalizing Eye Cream</h5>
+                        <p class="card-text text-danger fw-bold">₦7,000.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x14.jpg" class="card-img-top" alt="Gentle Foam Cleanser">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Gentle Foam Cleanser</h5>
+                        <p class="card-text text-danger fw-bold">₦14,500.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="3">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x11.jpg" class="card-img-top" alt="Anti-Aging Moisturizer">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="4">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Anti-Aging Moisturizer</h5>
+                        <p class="card-text text-danger fw-bold">₦11,800.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="4">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x16.jpg" class="card-img-top" alt="Hydrating Face Serum">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Hydrating Face Serum</h5>
+                        <p class="card-text text-danger fw-bold">₦4,850.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="1">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x12.jpg" class="card-img-top" alt="Revitalizing Eye Cream">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Revitalizing Eye Cream</h5>
+                        <p class="card-text text-danger fw-bold">₦7,000.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x14.jpg" class="card-img-top" alt="Gentle Foam Cleanser">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Gentle Foam Cleanser</h5>
+                        <p class="card-text text-danger fw-bold">₦14,500.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="3">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <div class="position-relative overflow-hidden">
+                        <img src="static/img/Products/x11.jpg" class="card-img-top" alt="Anti-Aging Moisturizer">
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-danger">Skincare</span>
+                        </div>
+                        <div
+                            class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 hover-opacity-100 transition">
+                            <button class="btn btn-sm btn-outline-light view-detail" data-id="4">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Anti-Aging Moisturizer</h5>
+                        <p class="card-text text-danger fw-bold">₦11,800.00</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="4">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+            <button class="btn btn-primary px-4 py-2" id="loadMoreBtn">Load More Products</button>
+        </div>
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productDetailModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="static/img/Products/x11.jpg" alt="Product Image" class="img-fluid rounded mb-3"
+                                id="modalProductImage">
+                            <div class="d-flex">
+                                <img src="static/img/Products/x11.jpg" alt="Thumbnail" class="img-thumbnail me-2"
+                                    width="60" style="cursor: pointer;">
+                                <img src="static/img/Products/x12.jpg" alt="Thumbnail" class="img-thumbnail me-2"
+                                    width="60" style="cursor: pointer;">
+                                <img src="static/img/Products/x14.jpg" alt="Thumbnail" class="img-thumbnail me-2"
+                                    width="60" style="cursor: pointer;">
+                                <img src="static/img/Products/x16.jpg" alt="Thumbnail" class="img-thumbnail" width="60"
+                                    style="cursor: pointer;">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductTitle">Product Title</h3>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="text-warning me-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-muted">(24 reviews)</span>
+                            </div>
+                            <h4 class="text-danger mb-3" id="modalProductPrice">₦0.00</h4>
+                            <p id="modalProductDescription">Product description will appear here.</p>
+                            <div class="mb-3">
+                                <label for="quantityInput" class="form-label">Quantity:</label>
+                                <div class="input-group" style="width: 150px;">
+                                    <button class="btn btn-outline-secondary" type="button" id="decrementQty">-</button>
+                                    <input type="number" class="form-control text-center" value="1" min="1"
+                                        id="quantityInput">
+                                    <button class="btn btn-outline-secondary" type="button" id="incrementQty">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 mb-2" id="addToCartModalBtn">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                            </button>
+                            <button class="btn btn-outline-primary w-100 py-2">
+                                <i class="fas fa-heart me-2"></i>Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" style="width: 400px;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Your Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+                <div class="text-center py-5">
+                    <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                    <p class="text-muted">Your cart is empty</p>
+                </div>
+            </div>
+            <div class="border-top pt-3 mt-3">
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">₦0.00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Shipping:</span>
+                    <span>Calculated at checkout</span>
+                </div>
+                <button class="btn btn-primary w-100 mb-2" id="checkoutBtn">Proceed to Checkout</button>
+                <button class="btn btn-outline-secondary w-100" data-bs-dismiss="offcanvas">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white py-4 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Logo -->
+                    <div class="mb-3">
+                        <img src="static/img/LOGO.png" alt="MadePetal Clinic & Spa Logo" class="img-fluid"
+                            style="max-height: 80px;">
+                    </div>
+
+                    <h5>MadePetal Clinic & Spa</h5>
+                    <p class="mb-4">Your oasis of relaxation and rejuvenation.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-4 pt-3">
+                        <a href="https://www.instagram.com/madepetal_clinic/" class="text-white me-3" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@madepetalclinicandspa" class="text-white" target="_blank">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html" class="text-white">Home</a></li>
+                        <li><a href="/services.html" class="text-white">Services</a></li>
+                        <li><a href="/product.html" class="text-white">Products</a></li>
+                        <li><a href="/blog.html" class="text-white">Blog</a></li>
+                        <li><a href="/contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank,
+                        Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
+                    <p><i class="fas fa-phone me-2"></i> 08130586133</p>
+                    <p><i class="fas fa-envelope me-2"></i> madepetalng@gmail.com</p>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">
+                <span>&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</span>
+                <span><a href="/privacy-policy.html" class="text-white">Privacy Policy</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
