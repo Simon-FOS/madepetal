@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | MadePetal Clinic & Spa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Lightbox CSS for image gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <style>
+        :root {
+            --primary-color: #E9FF70;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            padding-top: 80px;
+            background-color: #fefefe;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .gallery-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('static/img/facls.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+
+        .gallery-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .filter-buttons .btn {
+            margin: 5px;
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-buttons .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-buttons .btn.active {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            border-color: var(--primary-color);
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            background-color: white;
+            padding: 15px;
+        }
+
+        .gallery-caption h5 {
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+
+        .gallery-caption p {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+            margin: 80px 0;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card .quote-icon {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card .client-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), #d4e85a);
+            padding: 80px 0;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+
+        .cta-section h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-section .btn {
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .cta-section .btn-outline-dark:hover {
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-header {
+                padding: 60px 0;
+            }
+
+            .gallery-header h1 {
+                font-size: 2.5rem;
+            }
+
+            body {
+                padding-top: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #E9FF70 !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/img/mp8.png" alt="MadePetal Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #E9FF70;">
+                            <li><a class="dropdown-item" href="#">BEAUTY & COSMETIC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">SPA & MASSAGE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">WELLNESS & HOLISTIC SERVICES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">ADVANCED AESTHETICS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/product.html">Products</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link active fw-medium text-dark" href="/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/blog.html">Updates</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== GALLERY HEADER ========== -->
+    <section class="gallery-header text-center">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p class="lead">Explore our tranquil space, premium treatments, and satisfied clients through these
+                beautiful
+                moments captured at MadePetal Clinic & Spa.</p>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY FILTER ========== -->
+    <section class="gallery-filter py-4">
+        <div class="container text-center">
+            <div class="filter-buttons">
+                <button class="btn btn-outline-dark active" data-filter="all">All</button>
+                <button class="btn btn-outline-dark" data-filter="spa">Spa & Massage</button>
+                <button class="btn btn-outline-dark" data-filter="beauty">Beauty & Cosmetic</button>
+                <button class="btn btn-outline-dark" data-filter="facility">Our Facility</button>
+                <button class="btn btn-outline-dark" data-filter="clients">Happy Clients</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY CONTENT ========== -->
+    <section class="gallery-content py-5">
+        <div class="container">
+            <div class="row g-4 gallery-container">
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="spa">
+                    <a href="static/img/facls.jpeg" data-lightbox="gallery" data-title="Relaxing Spa Treatment">
+                        <img src="static/img/facls.jpeg" alt="Spa Treatment" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Relaxing Spa Treatment</h5>
+                        <p>Our signature massage therapy that helps relieve stress and tension</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="beauty">
+                    <a href="static/img/PDO.jpg" data-lightbox="gallery" data-title="Advanced Facial Treatment">
+                        <img src="static/img/PDO.jpg" alt="Facial Treatment" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Advanced Facial Treatment</h5>
+                        <p>Revitalizing facial using premium cosmetic products</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="facility">
+                    <a href="static/img/facls.jpeg" data-lightbox="gallery" data-title="Our Serene Treatment Room">
+                        <img src="static/img/facls.jpeg" alt="Treatment Room" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Our Serene Treatment Room</h5>
+                        <p>Designed for ultimate relaxation and comfort</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="clients">
+                    <a href="static/img/PDO.jpg" data-lightbox="gallery" data-title="Satisfied Client">
+                        <img src="static/img/PDO.jpg" alt="Happy Client" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Satisfied Client</h5>
+                        <p>Our clients leave feeling refreshed and rejuvenated</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="spa">
+                    <a href="static/img/facls.jpeg" data-lightbox="gallery" data-title="Aromatherapy Session">
+                        <img src="static/img/facls.jpeg" alt="Aromatherapy" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Aromatherapy Session</h5>
+                        <p>Using essential oils to enhance physical and emotional well-being</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="beauty">
+                    <a href="static/img/PDO.jpg" data-lightbox="gallery" data-title="Professional Skin Consultation">
+                        <img src="static/img/PDO.jpg" alt="Skin Consultation" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Professional Skin Consultation</h5>
+                        <p>Personalized skincare advice from our experts</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="facility">
+                    <a href="static/img/facls.jpeg" data-lightbox="gallery" data-title="Reception Area">
+                        <img src="static/img/facls.jpeg" alt="Reception" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Reception Area</h5>
+                        <p>Our welcoming space where your journey begins</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="clients">
+                    <a href="static/img/PDO.jpg" data-lightbox="gallery" data-title="Client Transformation">
+                        <img src="static/img/PDO.jpg" alt="Client Transformation" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Client Transformation</h5>
+                        <p>Visible results from our specialized treatments</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="spa">
+                    <a href="static/img/facls.jpeg" data-lightbox="gallery" data-title="Couples Massage">
+                        <img src="static/img/facls.jpeg" alt="Couples Massage" class="img-fluid">
+                    </a>
+                    <div class="gallery-caption">
+                        <h5>Couples Massage</h5>
+                        <p>Share the relaxation experience with your loved one</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button id="loadMore" class="btn btn-primary px-4 py-2"
+                    style="background-color: var(--primary-color); color: var(--dark-color); border: none;">Load
+                    More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="mb-4">"The facial treatment at MadePetal transformed my skin! I've never felt so
+                            pampered and the results were visible immediately."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="static/img/PDO.jpg" alt="Client 1" class="client-img me-3">
+                            <div>
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <small class="text-muted">Regular Client</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="mb-4">"The massage therapists are incredibly skilled. I leave every session feeling
+                            like a new person. Highly recommend their deep tissue massage!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="static/img/facls.jpeg" alt="Client 2" class="client-img me-3">
+                            <div>
+                                <h6 class="mb-0">Michael Brown</h6>
+                                <small class="text-muted">Monthly Visitor</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="mb-4">"The ambiance is so peaceful, and the staff are professional yet warm. I've been
+                            coming here for years and wouldn't go anywhere else."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="static/img/PDO.jpg" alt="Client 3" class="client-img me-3">
+                            <div>
+                                <h6 class="mb-0">Amina Yusuf</h6>
+                                <small class="text-muted">Loyal Customer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CALL TO ACTION ========== -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2>Ready to Experience Ultimate Relaxation?</h2>
+            <p class="lead mb-5">Book your appointment today and let us pamper you with our premium treatments.</p>
+            <a href="/contact.html" class="btn btn-dark me-3">Book Now</a>
+            <a href="tel:08130586133" class="btn btn-outline-dark">Call Us</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white py-4 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Logo -->
+                    <div class="mb-3">
+                        <img src="static/img/LOGO.png" alt="MadePetal Clinic & Spa Logo" class="img-fluid"
+                            style="max-height: 80px;">
+                    </div>
+
+                    <h5>MadePetal Clinic & Spa</h5>
+                    <p class="mb-4">Your oasis of relaxation and rejuvenation.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-4 pt-3">
+                        <a href="https://www.instagram.com/madepetal_clinic/" class="text-white me-3" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@madepetalclinicandspa" class="text-white" target="_blank">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html" class="text-white">Home</a></li>
+                        <li><a href="/services.html" class="text-white">Services</a></li>
+                        <li><a href="/product.html" class="text-white">Products</a></li>
+                        <li><a href="/blog.html" class="text-white">Blog</a></li>
+                        <li><a href="/contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank,
+                        Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
+                    <p><i class="fas fa-phone me-2"></i> 08130586133</p>
+                    <p><i class="fas fa-envelope me-2"></i> madepetalng@gmail.com</p>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">
+                <span>&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</span>
+                <span><a href="/privacy-policy.html" class="text-white">Privacy Policy</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="static/js/gallery.js"></script>
+</body>
+
+</html>
