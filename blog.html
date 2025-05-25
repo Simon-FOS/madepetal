@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Updates | MadePetal Clinic & Spa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Blog Page CSS -->
+    <link rel="stylesheet" href="static/css/blog.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #E9FF70 !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/img/mp8.png" alt="MadePetal Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #E9FF70;">
+                            <li><a class="dropdown-item" href="#">BEAUTY & COSMETIC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">SPA & MASSAGE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">WELLNESS & HOLISTIC SERVICES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">ADVANCED AESTHETICS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/product.html">Products</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link active fw-medium text-dark" href="/blog.html">Updates</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== BLOG HERO SECTION ========== -->
+    <section class="blog-hero">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-3">MadePetal Blog</h1>
+            <p class="lead">Discover beauty tips, spa updates, and wellness insights</p>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Blog Posts Column -->
+                <div class="col-lg-8">
+                    <!-- Announcement Section -->
+                    <div class="mb-5">
+                        <h2 class="mb-4"><i class="fas fa-bullhorn me-2"></i> Announcements</h2>
+                        <div class="card announcement-card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Holiday Schedule Update</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text"><i class="fas fa-calendar-alt me-2"></i> December 24-26: Closed for
+                                    Christmas</p>
+                                <p class="card-text"><i class="fas fa-calendar-alt me-2"></i> December 31-Jan 1: Reduced
+                                    Hours (10AM-3PM)</p>
+                                <p class="text-muted">Posted on December 15, 2023</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="card announcement-card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">New Safety Protocols</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">We've implemented enhanced sanitation measures to ensure your
+                                    safety during visits.</p>
+                                <p class="text-muted">Posted on November 30, 2023</p>
+                                <a href="#" class="btn btn-sm btn-outline-success">Read Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Articles -->
+                    <h2 class="mb-4"><i class="fas fa-star me-2"></i> Featured Articles</h2>
+                    <div class="row">
+                        <!-- Article 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 blog-card">
+                                <img src="static/img/PDO.jpg" class="card-img-top" alt="PDO Thread Lift">
+                                <div class="card-body">
+                                    <span class="badge bg-warning text-dark mb-2">New Service</span>
+                                    <h5 class="card-title">The Magic of PDO Thread Lifts</h5>
+                                    <p class="card-text">Discover how our new non-surgical facelift treatment can give
+                                        you a youthful appearance without downtime.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">December 10, 2023</small>
+                                        <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 blog-card">
+                                <img src="static/img/facls.jpeg" class="card-img-top" alt="Winter Skincare">
+                                <div class="card-body">
+                                    <span class="badge bg-info text-dark mb-2">Skincare</span>
+                                    <h5 class="card-title">Winter Skincare Essentials</h5>
+                                    <p class="card-text">Protect your skin during the harmattan season with these
+                                        professional tips and product recommendations.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">November 25, 2023</small>
+                                        <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- All Articles -->
+                    <h2 class="mb-4 mt-5"><i class="fas fa-newspaper me-2"></i> Latest Posts</h2>
+                    <div class="list-group">
+                        <!-- Article 3 -->
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Understanding Facial Cupping Therapy</h5>
+                                <small class="text-muted">November 15, 2023</small>
+                            </div>
+                            <p class="mb-1">Learn how this ancient technique is making waves in modern skincare.</p>
+                            <small><span class="badge bg-secondary">Wellness</span></small>
+                        </a>
+
+                        <!-- Article 4 -->
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Our New Organic Product Line</h5>
+                                <small class="text-muted">October 28, 2023</small>
+                            </div>
+                            <p class="mb-1">Discover the benefits of our new chemical-free skincare products.</p>
+                            <small><span class="badge bg-success">Products</span></small>
+                        </a>
+
+                        <!-- Article 5 -->
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">The Science Behind Hydrafacial</h5>
+                                <small class="text-muted">October 10, 2023</small>
+                            </div>
+                            <p class="mb-1">Why this treatment has become our most requested facial service.</p>
+                            <small><span class="badge bg-primary">Treatment</span></small>
+                        </a>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Blog pagination" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+                    <!-- Search Widget -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Search Blog</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search articles...">
+                                <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Categories</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#" class="text-decoration-none">Announcements</a></li>
+                                        <li><a href="#" class="text-decoration-none">Skincare</a></li>
+                                        <li><a href="#" class="text-decoration-none">Treatments</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#" class="text-decoration-none">Products</a></li>
+                                        <li><a href="#" class="text-decoration-none">Wellness</a></li>
+                                        <li><a href="#" class="text-decoration-none">Promotions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Posts Widget -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Popular Posts</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6><a href="#" class="text-decoration-none">5 Signs You Need a Professional Facial</a>
+                                </h6>
+                                <small class="text-muted">October 5, 2023</small>
+                            </div>
+                            <div class="mb-3">
+                                <h6><a href="#" class="text-decoration-none">The Benefits of Regular Spa Visits</a></h6>
+                                <small class="text-muted">September 18, 2023</small>
+                            </div>
+                            <div>
+                                <h6><a href="#" class="text-decoration-none">How to Choose the Right Facial for Your
+                                        Skin Type</a></h6>
+                                <small class="text-muted">August 30, 2023</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Subscribe to Newsletter</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Get the latest beauty tips and special offers straight to your inbox.</p>
+                            <form id="newsletterForm">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your email address" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white py-4 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Logo -->
+                    <div class="mb-3">
+                        <img src="static/img/LOGO.png" alt="MadePetal Clinic & Spa Logo" class="img-fluid"
+                            style="max-height: 80px;">
+                    </div>
+
+                    <h5>MadePetal Clinic & Spa</h5>
+                    <p class="mb-4">Your oasis of relaxation and rejuvenation.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-4 pt-3">
+                        <a href="https://www.instagram.com/madepetal_clinic/" class="text-white me-3" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@madepetalclinicandspa" class="text-white" target="_blank">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html" class="text-white">Home</a></li>
+                        <li><a href="/services.html" class="text-white">Services</a></li>
+                        <li><a href="/product.html" class="text-white">Products</a></li>
+                        <li><a href="/blog.html" class="text-white">Blog</a></li>
+                        <li><a href="/contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank,
+                        Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
+                    <p><i class="fas fa-phone me-2"></i> 08130586133</p>
+                    <p><i class="fas fa-envelope me-2"></i> madepetalng@gmail.com</p>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">
+                <span>&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</span>
+                <span><a href="/privacy-policy.html" class="text-white">Privacy Policy</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Blog Page JavaScript -->
+    <script src="static/js/blog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+/* Blog Page Styles */
+:root {
+    --primary: #E9FF70;
+    --primary-light: rgba(233, 255, 112, 0.2);
+    --dark: #212529;
+    --light: #f8f9fa;
+}
+
+.blog-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/facls.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.blog-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.announcement-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #d9f03a;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 1.25rem 0;
+}
+
+.list-group-item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.page-link {
+    color: var(--dark);
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-hero {
+        height: 250px;
+        margin-top: 70px;
+    }
+
+    .blog-hero h1 {
+        font-size: 2.5rem;
+    }
+}
