@@ -13,104 +13,9 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        /* Custom styles using your brand color #E9FF70 */
-        :root {
-            --primary: #E9FF70;
-            --primary-light: rgba(233, 255, 112, 0.1);
-            --dark: #212529;
-            --light: #dc40a0;
-        }
+    <link rel="stylesheet" href="static/css/contact.css">
 
-        body {
-            padding-top: 80px;
-            background-color: #a2bd40;
-        }
 
-        .contact-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), url('static/img/facls.jpeg');
-                    background-size: cover;
-                    background-position: center;
-                    height: 300px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: rgb(199, 60, 143);
-                    margin-bottom: 50px;
-            }
-
-            .contact-card {
-                border: none;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s;
-                height: 100%;
-            }
-
-            .contact-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .contact-icon {
-                font-size: 2rem;
-                color: var(--primary);
-                margin-bottom: 1rem;
-            }
-
-            .form-control:focus {
-                border-color: var(--primary);
-                box-shadow: 0 0 0 0.25rem rgba(233, 255, 112, 0.25);
-            }
-
-            .btn-primary {
-                background-color: var(--primary);
-                border: none;
-                color: var(--dark);
-                font-weight: 600;
-                padding: 10px 25px;
-            }
-
-            .btn-primary:hover {
-                background-color: #d9f03a;
-            }
-
-            .map-container {
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                height: 100%;
-            }
-
-            .contact-info-item {
-                display: flex;
-                align-items: flex-start;
-                margin-bottom: 1.5rem;
-            }
-
-            .contact-info-icon {
-                background-color: var(--primary-light);
-                color: var(--primary);
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 15px;
-                flex-shrink: 0;
-            }
-
-            .opening-hours {
-                background-color: var(--primary-light);
-                border-radius: 15px;
-                padding: 20px;
-            }
-
-            .opening-hours li {
-                padding: 8px 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-    </style>
 </head>
 
 <body>
@@ -167,7 +72,8 @@
     </nav>
 
     <!-- ========== HERO SECTION ========== -->
-    <section class="contact-hero">
+    <section class="contact-hero"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/img/facls.jpeg'); background-size: cover; background-position: center;">
         <div class="container text-center">
             <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
             <p class="lead">We'd love to hear from you. Reach out for appointments or inquiries.</p>
@@ -285,7 +191,7 @@
     </section>
 
     <!-- ========== SOCIAL MEDIA SECTION ========== -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-danger">
         <div class="container text-center">
             <h2 class="mb-4">Connect With Us</h2>
             <p class="mb-5">Follow us on social media for updates, promotions, and wellness tips.</p>
