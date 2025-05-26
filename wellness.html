@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness & Holistic Services | MadePetal Clinic & Spa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #E9FF70;
+            --primary-dark: #d9e85f;
+            --secondary: #f8f9fa;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --accent: #6b8cff;
+            --wellness-green: #a8d8b9;
+            --wellness-teal: #4fb9af;
+        }
+
+        body {
+            padding-top: 80px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fbfa;
+            color: #333;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('static/img/facls.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background-color: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, var(--wellness-teal), var(--wellness-green));
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+        }
+
+        .service-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .benefit-item {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .benefit-item:before {
+            content: "✓";
+            color: var(--wellness-teal);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .section-divider {
+            border-top: 2px dashed var(--wellness-green);
+            margin: 50px auto;
+            width: 80%;
+            opacity: 0.5;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--wellness-teal), var(--wellness-green));
+            padding: 60px 0;
+            margin: 60px 0;
+            color: white;
+        }
+
+        .blend-card {
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .blend-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: var(--wellness-teal);
+        }
+
+        .testimonial-card {
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: var(--wellness-teal);
+            color: white;
+        }
+
+        .nav-pills .nav-link {
+            color: var(--dark);
+        }
+
+        .tab-content {
+            padding: 20px;
+            border-radius: 0 0 12px 12px;
+            background-color: white;
+        }
+
+        .wellness-icon {
+            font-size: 2.5rem;
+            color: var(--wellness-teal);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #E9FF70 !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/img/mp8.png" alt="MadePetal Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active fw-medium text-dark" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #E9FF70;">
+                            <li><a class="dropdown-item" href="#">BEAUTY & COSMETIC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">SPA & MASSAGE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item active" href="#">WELLNESS & HOLISTIC SERVICES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">ADVANCED AESTHETICS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/product.html">Products</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/blog.html">Updates</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Wellness & Holistic Services</h1>
+            <p class="lead mb-5">Restore balance and vitality with our rejuvenating wellness treatments</p>
+            <a href="#services" class="btn btn-light btn-lg px-4 me-3">Explore Services</a>
+            <a href="/contact.html" class="btn btn-outline-light btn-lg px-4">Book Consultation</a>
+        </div>
+    </section>
+
+    <!-- ========== INTRO SECTION ========== -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold mb-4">Holistic Wellness for Body & Mind</h2>
+                <p class="lead">At MadePetal, we believe true beauty begins with inner balance and well-being. Our
+                    <strong>Wellness & Holistic Services</strong> are designed to detoxify, rejuvenate, and restore
+                    harmony to your body and mind. Experience our comprehensive approach to wellness that promotes
+                    relaxation, detoxification, and overall vitality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="container mb-5">
+        <!-- Detox Therapy -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">1. Detox Therapy</h3>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/600x400?text=Detox+Therapy" alt="Detox Therapy"
+                                class="img-fluid service-img">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4">
+                                <p>Cleanse your body of toxins and impurities with our advanced detox treatments that
+                                    combine modern techniques with ancient wellness practices.</p>
+                                <ul class="list-unstyled">
+                                    <li class="benefit-item">Eliminates harmful toxins accumulated from environmental
+                                        pollutants and lifestyle factors</li>
+                                    <li class="benefit-item">Boosts energy levels by improving cellular function</li>
+                                    <li class="benefit-item">Improves digestion and gut health</li>
+                                    <li class="benefit-item">Enhances skin clarity by purifying from within</li>
+                                </ul>
+                                <div class="mt-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock wellness-icon me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">Duration</h6>
+                                            <p class="mb-0">60-90 minutes per session</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Slimming Wraps -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">2. Slimming Wraps</h3>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-6 order-md-2">
+                            <img src="https://via.placeholder.com/600x400?text=Slimming+Wraps" alt="Slimming Wraps"
+                                class="img-fluid service-img">
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <div class="p-4">
+                                <p>Target stubborn fat and cellulite with our body-contouring slimming wraps that use
+                                    natural ingredients to promote inch loss and skin tightening.</p>
+                                <ul class="list-unstyled">
+                                    <li class="benefit-item">Reduces water retention and bloating</li>
+                                    <li class="benefit-item">Tightens and tones loose skin</li>
+                                    <li class="benefit-item">Minimizes the appearance of cellulite</li>
+                                    <li class="benefit-item">Promotes measurable inch loss with consistent treatments
+                                    </li>
+                                </ul>
+                                <div class="mt-4">
+                                    <div class="alert alert-info">
+                                        <strong>Tip:</strong> For best results, we recommend a series of 6-8 treatments
+                                        combined with proper hydration.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Colon Hydrotherapy -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">3. Colon Hydrotherapy</h3>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/600x400?text=Colon+Hydrotherapy"
+                                alt="Colon Hydrotherapy" class="img-fluid service-img">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4">
+                                <p>A gentle, internal cleanse to improve digestive health and detoxify the colon using
+                                    filtered water at controlled temperatures and pressure.</p>
+                                <ul class="list-unstyled">
+                                    <li class="benefit-item">Supports healthy digestion and regular bowel movements</li>
+                                    <li class="benefit-item">Enhances nutrient absorption by removing waste buildup</li>
+                                    <li class="benefit-item">Boosts energy and mental clarity</li>
+                                    <li class="benefit-item">Promotes healthy weight management</li>
+                                </ul>
+                                <div class="mt-3">
+                                    <div class="alert alert-warning">
+                                        <strong>Note:</strong> Available where permitted by local regulations.
+                                        Consultation required prior to treatment.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Sauna & Steam Therapy -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">4. Sauna & Steam Therapy</h3>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/600x400?text=Sauna+Therapy" alt="Sauna Therapy"
+                                class="img-fluid service-img">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4">
+                                <ul class="nav nav-pills mb-3" id="thermal-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="sauna-tab" data-bs-toggle="pill"
+                                            data-bs-target="#sauna" type="button">Sauna Therapy</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="steam-tab" data-bs-toggle="pill"
+                                            data-bs-target="#steam" type="button">Steam Therapy</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="thermal-tabContent">
+                                    <div class="tab-pane fade show active" id="sauna" role="tabpanel">
+                                        <h5>Infrared & Traditional Sauna</h5>
+                                        <p>Our sauna therapy options provide deep detoxification through sweating in a
+                                            controlled, relaxing environment.</p>
+                                        <ul class="list-unstyled">
+                                            <li class="benefit-item">Deep detoxification through sweating out toxins
+                                            </li>
+                                            <li class="benefit-item">Relieves muscle tension and joint pain</li>
+                                            <li class="benefit-item">Improves circulation and cardiovascular health</li>
+                                            <li class="benefit-item">Supports immune function and skin health</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="steam" role="tabpanel">
+                                        <h5>Herbal Steam Therapy</h5>
+                                        <p>Our steam treatments use infused herbal essences to enhance the therapeutic
+                                            benefits.</p>
+                                        <ul class="list-unstyled">
+                                            <li class="benefit-item">Deeply purifies skin by opening pores</li>
+                                            <li class="benefit-item">Relieves respiratory congestion and sinus issues
+                                            </li>
+                                            <li class="benefit-item">Reduces stress and anxiety through aromatherapy
+                                            </li>
+                                            <li class="benefit-item">Improves skin elasticity and complexion</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Aromatherapy -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">5. Aromatherapy Sessions</h3>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-6 order-md-2">
+                            <img src="https://via.placeholder.com/600x400?text=Aromatherapy" alt="Aromatherapy"
+                                class="img-fluid service-img">
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <div class="p-4">
+                                <p>Enhance mood, reduce stress, and promote healing with our customized essential oil
+                                    blends tailored to your specific needs.</p>
+                                <div class="row mt-4">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="blend-card">
+                                            <h5><i class="fas fa-spa blend-icon"></i> Relaxation Blend</h5>
+                                            <p class="mb-1">Lavender, Chamomile, Bergamot</p>
+                                            <small class="text-muted">Calms the mind, reduces anxiety, promotes
+                                                sleep</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="blend-card">
+                                            <h5><i class="fas fa-bolt blend-icon"></i> Energizing Blend</h5>
+                                            <p class="mb-1">Peppermint, Eucalyptus, Citrus</p>
+                                            <small class="text-muted">Boosts mental clarity and physical energy</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="blend-card">
+                                            <h5><i class="fas fa-shield-virus blend-icon"></i> Immune Boost</h5>
+                                            <p class="mb-1">Tea Tree, Lemon, Rosemary</p>
+                                            <small class="text-muted">Supports immune system function</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="blend-card">
+                                            <h5><i class="fas fa-heart blend-icon"></i> Emotional Balance</h5>
+                                            <p class="mb-1">Ylang Ylang, Clary Sage, Patchouli</p>
+                                            <small class="text-muted">Promotes emotional harmony</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- O-Shot Therapy -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">6. O-Shot Therapy</h3>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/600x400?text=O-Shot+Therapy" alt="O-Shot Therapy"
+                                class="img-fluid service-img">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4">
+                                <p>A non-invasive oxygenating treatment that enhances circulation, skin rejuvenation,
+                                    and overall vitality by stimulating cellular regeneration.</p>
+                                <ul class="list-unstyled">
+                                    <li class="benefit-item">Revitalizes skin cells for a more youthful appearance</li>
+                                    <li class="benefit-item">Boosts collagen production naturally</li>
+                                    <li class="benefit-item">Improves oxygen absorption at cellular level</li>
+                                    <li class="benefit-item">Enhances overall wellness and energy levels</li>
+                                </ul>
+                                <div class="mt-4">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-question-circle wellness-icon me-3"></i>
+                                        <div>
+                                            <h6>How It Works</h6>
+                                            <p class="mb-0">This treatment uses specialized equipment to deliver
+                                                oxygen-rich solutions to targeted areas, promoting healing and
+                                                rejuvenation from within.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">Why Choose Our Wellness Services?</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded h-100">
+                        <div class="wellness-icon mb-3">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h5>Holistic Approach</h5>
+                        <p class="mb-0">We treat the whole person - body, mind, and spirit - for complete wellness</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded h-100">
+                        <div class="wellness-icon mb-3">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h5>Expert Practitioners</h5>
+                        <p class="mb-0">Our therapists are certified in multiple wellness modalities</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded h-100">
+                        <div class="wellness-icon mb-3">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h5>Natural & Safe</h5>
+                        <p class="mb-0">We use only non-invasive, toxin-free methods and products</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded h-100">
+                        <div class="wellness-icon mb-3">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5>Personalized Plans</h5>
+                        <p class="mb-0">Every treatment is tailored to your unique wellness goals</p>
+                    </div>
+                </div>
+            </div>
+            <a href="/contact.html" class="btn btn-light btn-lg mt-5 px-4">Start Your Wellness Journey</a>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="container mb-5">
+        <h2 class="text-center fw-bold mb-5">What Our Clients Say</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex mb-3">
+                        <img src="https://via.placeholder.com/60?text=Client" alt="Client" class="rounded-circle me-3"
+                            width="60" height="60">
+                        <div>
+                            <h5 class="mb-1">Amina B.</h5>
+                            <div class="text-warning mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <small class="text-muted">Detox Therapy</small>
+                        </div>
+                    </div>
+                    <p>"After just three detox sessions, my energy levels have completely transformed. I sleep better,
+                        my skin is clearer, and I feel lighter overall. The wellness team is incredibly knowledgeable!"
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex mb-3">
+                        <img src="https://via.placeholder.com/60?text=Client" alt="Client" class="rounded-circle me-3"
+                            width="60" height="60">
+                        <div>
+                            <h5 class="mb-1">James T.</h5>
+                            <div class="text-warning mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <small class="text-muted">Sauna Therapy</small>
+                        </div>
+                    </div>
+                    <p>"The infrared sauna sessions have helped my joint pain tremendously. I come twice a week now and
+                        it's become an essential part of my self-care routine. The facility is always clean and
+                        peaceful."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex mb-3">
+                        <img src="https://via.placeholder.com/60?text=Client" alt="Client" class="rounded-circle me-3"
+                            width="60" height="60">
+                        <div>
+                            <h5 class="mb-1">Chioma K.</h5>
+                            <div class="text-warning mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <small class="text-muted">Aromatherapy</small>
+                        </div>
+                    </div>
+                    <p>"The custom aromatherapy blend they created for my stress and anxiety has been life-changing. I
+                        now have a bottle for home use too. The therapists really listen to your needs."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white py-4 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Logo -->
+                    <div class="mb-3">
+                        <img src="static/img/LOGO.png" alt="MadePetal Clinic & Spa Logo" class="img-fluid"
+                            style="max-height: 80px;">
+                    </div>
+
+                    <h5>MadePetal Clinic & Spa</h5>
+                    <p class="mb-4">Your oasis of relaxation and rejuvenation.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-4 pt-3">
+                        <a href="https://www.instagram.com/madepetal_clinic/" class="text-white me-3" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@madepetalclinicandspa" class="text-white" target="_blank">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html" class="text-white">Home</a></li>
+                        <li><a href="/services.html" class="text-white">Services</a></li>
+                        <li><a href="/product.html" class="text-white">Products</a></li>
+                        <li><a href="/blog.html" class="text-white">Blog</a></li>
+                        <li><a href="/contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank,
+                        Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
+                    <p><i class="fas fa-phone me-2"></i> 08130586133</p>
+                    <p><i class="fas fa-envelope me-2"></i> madepetalng@gmail.com</p>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">
+                <span>&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</span>
+                <span><a href="/privacy-policy.html" class="text-white">Privacy Policy</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

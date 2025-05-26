@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty & Cosmetics Services | MadePetal Clinic & Spa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #E9FF70;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --dark-color: #212529;
+        }
+
+        body {
+            padding-top: 80px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('static/img/facls.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .service-header {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 15px;
+        }
+
+        .benefits-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .benefits-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            background-color: var(--primary-color);
+            padding: 60px 0;
+            margin: 50px 0;
+        }
+
+        .service-divider {
+            border-top: 2px dashed var(--primary-color);
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #E9FF70 !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/img/mp8.png" alt="MadePetal Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active fw-medium text-dark" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #E9FF70;">
+                            <li><a class="dropdown-item active" href="#">BEAUTY & COSMETIC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">SPA & MASSAGE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">WELLNESS & HOLISTIC SERVICES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">ADVANCED AESTHETICS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/product.html">Products</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/blog.html">Updates</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Beauty & Cosmetics</h1>
+            <p class="lead mb-5">Enhance your natural beauty with our premium cosmetic services</p>
+            <a href="#services" class="btn btn-light btn-lg px-4 me-2">Explore Services</a>
+            <a href="/contact.html" class="btn btn-outline-light btn-lg px-4">Book Now</a>
+        </div>
+    </section>
+
+    <!-- ========== INTRO SECTION ========== -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold mb-4">Professional Beauty Services</h2>
+                <p class="lead">At MadePetal, we specialize in enhancing your natural beauty with our premium
+                    <strong>Beauty & Cosmetics</strong> services. Our expert treatments are designed to help you look
+                    and feel your best, with meticulous attention to detail and the latest techniques in the industry.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="container mb-5">
+        <!-- Semi-Permanent Makeup -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">1. Semi-Permanent Makeup</h3>
+                    </div>
+                    <img src="static/img/PDO.jpg" alt="Semi-Permanent Makeup" class="img-fluid service-img">
+                    <div class="card-body">
+                        <p class="card-text">Achieve flawless, long-lasting beauty with our semi-permanent makeup
+                            solutions. Our skilled artists use high-quality pigments to create natural-looking
+                            enhancements.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong>Microblading (Eyebrows)</strong> – Hand-drawn hair strokes for
+                                fuller, perfectly shaped brows.</li>
+                            <li class="mb-2"><strong>Microshading/Ombre Brows</strong> – Soft powder effect for a
+                                defined yet natural brow look.</li>
+                            <li><strong>Lip Blush Tattoo</strong> – Enhance your lips with a subtle tint for a youthful,
+                                rosy appearance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-4">
+                    <h4 class="fw-bold mb-4">Before & After Results</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300x300?text=Before" alt="Before Microblading"
+                                    class="card-img-top">
+                                <div class="card-body text-center">
+                                    <p class="mb-0"><small>Before Treatment</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300x300?text=After" alt="After Microblading"
+                                    class="card-img-top">
+                                <div class="card-body text-center">
+                                    <p class="mb-0"><small>After Treatment</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-divider"></div>
+
+        <!-- Teeth Whitening -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-lg-2">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">2. Teeth Whitening & Oral Aesthetics</h3>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400?text=Teeth+Whitening" alt="Teeth Whitening"
+                        class="img-fluid service-img">
+                    <div class="card-body">
+                        <p class="card-text">A bright, confident smile starts here. Our advanced teeth whitening and
+                            oral aesthetics treatments deliver stunning results.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong>LED Teeth Whitening</strong> – Professional-grade whitening for a
+                                radiant smile in just one session.</li>
+                            <li><strong>Tooth Gems</strong> – Add a touch of sparkle with safe, stylish tooth
+                                embellishments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-4">
+                    <h4 class="fw-bold mb-4">Transform Your Smile</h4>
+                    <p>Our professional teeth whitening treatments can lighten your teeth by several shades in just one
+                        visit. The results are immediate and long-lasting when proper aftercare is followed.</p>
+                    <div class="bg-light p-4 rounded">
+                        <h5 class="fw-bold">Treatment Benefits:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Quick, painless procedure
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Noticeable results
+                                immediately</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Safe for most patients</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Boosts confidence and appearance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-divider"></div>
+
+        <!-- Piercing & Body Art -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="mb-0">3. Piercing & Body Art</h3>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400?text=Body+Piercing" alt="Body Piercing"
+                        class="img-fluid service-img">
+                    <div class="card-body">
+                        <p class="card-text">Express yourself with our precision piercing services. We prioritize
+                            hygiene, safety, and artistry in every procedure.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong>Ear Piercing</strong> – Classic and curated placements for a
+                                stylish look.</li>
+                            <li class="mb-2"><strong>Nose Piercing</strong> – Elegant studs and hoops for a bold or
+                                subtle statement.</li>
+                            <li class="mb-2"><strong>Belly Button Piercing</strong> – Trendy and tasteful navel
+                                adornments.</li>
+                            <li><strong>Dermal Piercing</strong> – Unique single-point piercings for a striking effect.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-4">
+                    <h4 class="fw-bold mb-4">Safe & Professional Piercings</h4>
+                    <p>All our piercing procedures are performed by certified professionals using sterile, single-use
+                        needles and high-quality jewelry.</p>
+                    <div class="accordion" id="piercingAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    Aftercare Instructions
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#piercingAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Clean the piercing twice daily with saline solution</li>
+                                        <li>Avoid touching the piercing with unwashed hands</li>
+                                        <li>Don't remove jewelry during healing period</li>
+                                        <li>Avoid swimming pools and hot tubs</li>
+                                        <li>Watch for signs of infection (excessive redness, swelling, or discharge)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
+                                    Healing Times
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#piercingAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Earlobe:</strong> 6-8 weeks</li>
+                                        <li><strong>Cartilage:</strong> 4-12 months</li>
+                                        <li><strong>Nose:</strong> 2-4 months</li>
+                                        <li><strong>Belly Button:</strong> 6-12 months</li>
+                                        <li><strong>Dermal:</strong> 1-3 months</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="cta-section text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Why Choose MadePetal?</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <div class="bg-white p-3 rounded shadow-sm">
+                                <i class="fas fa-user-md fa-3x mb-3 text-dark"></i>
+                                <h5>Expert Professionals</h5>
+                                <p class="mb-0">Certified and experienced practitioners</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="bg-white p-3 rounded shadow-sm">
+                                <i class="fas fa-star fa-3x mb-3 text-dark"></i>
+                                <h5>Premium Products</h5>
+                                <p class="mb-0">High-quality, safe, and long-lasting results</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="bg-white p-3 rounded shadow-sm">
+                                <i class="fas fa-shield-alt fa-3x mb-3 text-dark"></i>
+                                <h5>Hygienic Environment</h5>
+                                <p class="mb-0">Sterilized tools and sanitized spaces</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="bg-white p-3 rounded shadow-sm">
+                                <i class="fas fa-heart fa-3x mb-3 text-dark"></i>
+                                <h5>Personalized Care</h5>
+                                <p class="mb-0">Tailored treatments to suit your beauty goals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/contact.html" class="btn btn-dark btn-lg mt-4 px-4">Book Your Appointment Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="container mb-5">
+        <h2 class="text-center fw-bold mb-5">What Our Clients Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/100?text=Client" alt="Client" class="rounded-circle mb-3"
+                            width="80">
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text">"The microblading results are amazing! My brows look so natural and full.
+                            The technician was incredibly skilled and made me feel comfortable throughout the process."
+                        </p>
+                        <h6 class="card-title mb-1">- Sarah K.</h6>
+                        <small class="text-muted">Eyebrow Microblading</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/100?text=Client" alt="Client" class="rounded-circle mb-3"
+                            width="80">
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text">"I got my teeth whitened here and the difference is night and day! The
+                            staff was professional and the results exceeded my expectations. Highly recommend!"</p>
+                        <h6 class="card-title mb-1">- Michael T.</h6>
+                        <small class="text-muted">Teeth Whitening</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/100?text=Client" alt="Client" class="rounded-circle mb-3"
+                            width="80">
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text">"Got my nose pierced and it was completely painless! The piercer was so
+                            knowledgeable and made sure I understood all the aftercare instructions. Beautiful jewelry
+                            selection too."</p>
+                        <h6 class="card-title mb-1">- Aisha B.</h6>
+                        <small class="text-muted">Nose Piercing</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white py-4 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Logo -->
+                    <div class="mb-3">
+                        <img src="static/img/LOGO.png" alt="MadePetal Clinic & Spa Logo" class="img-fluid"
+                            style="max-height: 80px;">
+                    </div>
+
+                    <h5>MadePetal Clinic & Spa</h5>
+                    <p class="mb-4">Your oasis of relaxation and rejuvenation.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-4 pt-3">
+                        <a href="https://www.instagram.com/madepetal_clinic/" class="text-white me-3" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@madepetalclinicandspa" class="text-white" target="_blank">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html" class="text-white">Home</a></li>
+                        <li><a href="/services.html" class="text-white">Services</a></li>
+                        <li><a href="/product.html" class="text-white">Products</a></li>
+                        <li><a href="/blog.html" class="text-white">Blog</a></li>
+                        <li><a href="/contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank,
+                        Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
+                    <p><i class="fas fa-phone me-2"></i> 08130586133</p>
+                    <p><i class="fas fa-envelope me-2"></i> madepetalng@gmail.com</p>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">
+                <span>&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</span>
+                <span><a href="/privacy-policy.html" class="text-white">Privacy Policy</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

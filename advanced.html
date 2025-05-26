@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Aesthetics | MadePetal Clinic & Spa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #E9FF70;
+            --secondary-color: #f8f9fa;
+            --dark-color: #212529;
+            --light-color: #ffffff;
+        }
+
+        body {
+            padding-top: 80px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('static/img/facls.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .service-card .card-body {
+            padding: 25px;
+        }
+
+        .service-card .card-title {
+            color: var(--dark-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .service-card .card-text {
+            color: #6c757d;
+        }
+
+        .service-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .benefits-section {
+            background-color: var(--secondary-color);
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            background-color: var(--primary-color);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #343a40;
+            border-color: #343a40;
+        }
+
+        .btn-outline-primary {
+            color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+    </style>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #E9FF70 !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/img/mp8.png" alt="MadePetal Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active fw-medium text-dark" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #E9FF70;">
+                            <li><a class="dropdown-item" href="#">BEAUTY & COSMETIC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">SPA & MASSAGE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">WELLNESS & HOLISTIC SERVICES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item active" href="#">ADVANCED AESTHETICS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/product.html">Products</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/blog.html">Updates</a>
+                    </li>
+                    <li class="nav-item px-2 d-flex align-items-center">
+                        <a class="nav-link fw-medium text-dark" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Advanced Aesthetics</h1>
+            <p class="lead mb-5">Enhance your natural beauty with our cutting-edge non-surgical treatments designed to
+                rejuvenate, refine, and revitalize your skin and body.</p>
+            <a href="#contact" class="btn btn-primary btn-lg px-4 me-2">Book Consultation</a>
+            <a href="#services" class="btn btn-outline-light btn-lg px-4">Our Services</a>
+        </div>
+    </section>
+
+    <!-- ========== INTRO SECTION ========== -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <p class="lead">Our expert practitioners use the latest non-surgical techniques to help you achieve a
+                    youthful, radiant appearance with minimal downtime. At MadePetal, we combine medical expertise with
+                    artistic vision to deliver natural-looking results that enhance your unique beauty.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="container mb-5">
+        <h2 class="text-center section-title">Our Advanced Aesthetic Services</h2>
+
+        <!-- Aesthetic Injectables -->
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <div class="service-card card">
+                    <img src="https://images.unsplash.com/photo-1599351431403-8912bdaf5d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        class="card-img-top" alt="Aesthetic Injectables">
+                    <div class="card-body">
+                        <h3 class="card-title">1. Aesthetic Injectables</h3>
+                        <p class="card-text">Precision treatments to smooth wrinkles, restore volume, and enhance facial
+                            contours.</p>
+                        <ul class="service-list">
+                            <li><strong>Botox</strong> – Reduce fine lines and wrinkles for a refreshed look.</li>
+                            <li><strong>Dermal Fillers</strong> – Restore lost volume in cheeks, lips, and under-eye
+                                areas.</li>
+                            <li><strong>Lip Fillers</strong> – Enhance lip shape and volume for a natural, plump look.
+                            </li>
+                            <li><strong>Chin/Jaw Contouring</strong> – Define and sculpt the jawline for a more
+                                structured appearance.</li>
+                            <li><strong>Tear Trough Fillers</strong> – Minimize under-eye hollows and dark circles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-card card">
+                    <img src="static/img/PDO.jpg" class="card-img-top" alt="Microneedling & Skin Rejuvenation">
+                    <div class="card-body">
+                        <h3 class="card-title">2. Microneedling & Skin Rejuvenation</h3>
+                        <p class="card-text">Stimulate collagen production for smoother, firmer, and glowing skin.</p>
+                        <ul class="service-list">
+                            <li><strong>Microneedling (with or without PRP)</strong> – Improves texture, scars, and fine
+                                lines.</li>
+                            <li><strong>Vampire Facial (PRP Facial)</strong> – Uses your own platelet-rich plasma for
+                                deep rejuvenation.</li>
+                            <li><strong>PDO Threads</strong> – Non-surgical facelift for lifting sagging skin on the
+                                face and neck.</li>
+                            <li><strong>Mesotherapy</strong> – Nutrient-rich injections for hydration and skin
+                                revitalization.</li>
+                            <li><strong>RF Microneedling</strong> – Combines microneedling with radiofrequency for
+                                enhanced tightening.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Laser Treatments -->
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <div class="service-card card">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        class="card-img-top" alt="Laser & Light-Based Treatments">
+                    <div class="card-body">
+                        <h3 class="card-title">3. Laser & Light-Based Treatments</h3>
+                        <p class="card-text">Advanced technology for hair removal, skin resurfacing, and pigmentation
+                            correction.</p>
+                        <ul class="service-list">
+                            <li><strong>Laser Hair Removal</strong> – Permanent reduction for all body areas.</li>
+                            <li><strong>Laser Skin Resurfacing</strong> – Smooths wrinkles, acne scars, and uneven
+                                texture.</li>
+                            <li><strong>Laser Stretch Mark Removal</strong> – Minimizes the appearance of stretch marks.
+                            </li>
+                            <li><strong>Laser Tattoo Removal</strong> – Safe and effective fading of unwanted tattoos.
+                            </li>
+                            <li><strong>IPL Photofacial</strong> – Targets sunspots, redness, and uneven skin tone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-card card">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80"
+                        class="card-img-top" alt="Skin Tightening & Lifting">
+                    <div class="card-body">
+                        <h3 class="card-title">4. Skin Tightening & Lifting</h3>
+                        <p class="card-text">Non-surgical alternatives to achieve a firmer, lifted appearance.</p>
+                        <ul class="service-list">
+                            <li><strong>PDO Thread Lift (Face, Neck, Body)</strong> – Instant lifting with gradual
+                                collagen boost.</li>
+                            <li><strong>HIFU (High-Intensity Focused Ultrasound)</strong> – Deep skin tightening for a
+                                lifted effect.</li>
+                            <li><strong>RF Skin Tightening</strong> – Stimulates collagen with radiofrequency energy.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Services -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="service-card card">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        class="card-img-top" alt="Pigmentation & Scar Treatments">
+                    <div class="card-body">
+                        <h3 class="card-title">5. Pigmentation & Scar Treatments</h3>
+                        <p class="card-text">Customized solutions to even out skin tone and improve scars.</p>
+                        <ul class="service-list">
+                            <li><strong>Chemical Peels (Light, Medium, Deep)</strong> – Exfoliate and renew skin for a
+                                brighter complexion.</li>
+                            <li><strong>Stretch Mark Camouflage</strong> – Reduces visibility of stretch marks.</li>
+                            <li><strong>Scar Revision Treatments</strong> – Minimizes acne and surgical scars.</li>
+                            <li><strong>Hyperpigmentation Treatment</strong> – Corrects dark spots and melasma.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-card card">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        class="card-img-top" alt="Non-Surgical Contouring">
+                    <div class="card-body">
+                        <h3 class="card-title">6. Non-Surgical Contouring</h3>
+                        <p class="card-text">Sculpt and tone your body without surgery.</p>
+                        <ul class="service-list">
+                            <li><strong>Cavitation (Fat Melting)</strong> – Targets stubborn fat with ultrasonic waves.
+                            </li>
+                            <li><strong>Radiofrequency Body Sculpting</strong> – Tightens skin while reducing fat.</li>
+                            <li><strong>Cryolipolysis (Fat Freezing)</strong> – Freezes fat cells for gradual
+                                elimination.</li>
+                            <li><strong>Vacuum Therapy (Butt Lift)</strong> – Enhances curves through suction
+                                technology.</li>
+                            <li><strong>EMSculpt</strong> – Builds muscle and burns fat with electromagnetic
+                                stimulation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BENEFITS SECTION ========== -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="text-center section-title">Why Choose MadePetal for Advanced Aesthetics?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Expert Practitioners</h4>
+                        <p>Certified professionals with years of experience in aesthetic medicine.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h4>Cutting-Edge Technology</h4>
+                        <p>Latest FDA-approved devices and techniques for optimal results.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h4>Personalized Treatments</h4>
+                        <p>Customized plans tailored to your unique needs and goals.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Natural-Looking Results</h4>
+                        <p>Enhance your beauty without overdoing it for a refreshed appearance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Ready to Transform Your Look?</h2>
+                    <p class="lead mb-5">Let our specialists design the perfect treatment plan to help you achieve your
+                        aesthetic goals.</p>
+                    <a href="#contact" class="btn btn-dark btn-lg px-4 me-3">Book a Consultation</a>
+                    <a href="tel:08130586133" class="btn btn-outline-dark btn-lg px-4"><i class="fas fa-phone me-2"></i>
+                        Call Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white py-4 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Logo -->
+                    <div class="mb-3">
+                        <img src="static/img/LOGO.png" alt="MadePetal Clinic & Spa Logo" class="img-fluid"
+                            style="max-height: 80px;">
+                    </div>
+
+                    <h5>MadePetal Clinic & Spa</h5>
+                    <p class="mb-4">Your oasis of relaxation and rejuvenation.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-4 pt-3">
+                        <a href="https://www.instagram.com/madepetal_clinic/" class="text-white me-3" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yourprofile" class="text-white me-3" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/2348130586133" class="text-white me-3" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@madepetalclinicandspa" class="text-white" target="_blank">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html" class="text-white">Home</a></li>
+                        <li><a href="/services.html" class="text-white">Services</a></li>
+                        <li><a href="/product.html" class="text-white">Products</a></li>
+                        <li><a href="/blog.html" class="text-white">Blog</a></li>
+                        <li><a href="/contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Same Building with Trust Micro-Finance Bank, Opposite
+                        The Palms, Km1, Magboro, Lagos-Ibadan Express Way</p>
+                    <p><i class="fas fa-phone me-2"></i> 08130586133</p>
+                    <p><i class="fas fa-envelope me-2"></i> madepetalng@gmail.com</p>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">
+                <span>&copy; 2025 MadePetal Clinic & Spa. All rights reserved.</span>
+                <span><a href="/privacy-policy.html" class="text-white">Privacy Policy</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
