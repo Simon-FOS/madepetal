@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item px-2 d-flex align-items-center">
-                        <a class="nav-link fw-medium text-dark" href="./index.html">Home</a>
+                        <a class="nav-link active fw-medium text-dark" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -54,6 +54,7 @@
                             <li><a class="dropdown-item" href="advanced.html">ADVANCED AESTHETICS</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-item px-2 d-flex align-items-center">
                         <a class="nav-link fw-medium text-dark" href="./product.html">Products</a>
                     </li>
@@ -63,8 +64,33 @@
                     <li class="nav-item px-2 d-flex align-items-center">
                         <a class="nav-link fw-medium text-dark" href="./blog.html">Blog</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Clients
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #E9FF70;">
+                            <li><a class="dropdown-item" href="prices.html">PRICE LIST</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="client-intake.html">CLIENT INTAKE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="consent.html">CONSENT & APPROVAL</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="terms-of-service.html">TERMS OF SERVICE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="privacy-policy.html">PRIVACY-POLICY</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item px-2 d-flex align-items-center">
-                        <a class="nav-link active fw-medium text-dark" href="./contact.html">Contact</a>
+                        <a class="nav-link fw-medium text-dark" href="./contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -143,7 +169,7 @@
                 <div class="col-lg-4">
                     <div class="contact-card p-4 h-100">
                         <h3 class="mb-4">Send Us a Message</h3>
-                        <form id="contactForm">
+                        <form action="https://formspree.io/f/xeogyloz" method="post" id="contactForm">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="name" required>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | MadePetal Clinic and Spa</title>
+    <style>
+        :root {
+            --deep-green: #1a5d1a;
+            --lemon-green: #a3de83;
+            --yellow: #f7ea00;
+            --light-yellow: #fff9c4;
+            --light-green: #e8f5e9;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #5A5A5A;
+            --border: #d1e7d1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-green);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--lemon-green) 100%);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Content Section */
+        .content {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            margin-bottom: 60px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            color: var(--deep-green);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section h3 {
+            font-size: 20px;
+            color: var(--deep-green);
+            margin: 25px 0 15px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .section ul,
+        .section ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .highlight-box {
+            background-color: var(--light-yellow);
+            border-left: 4px solid var(--yellow);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .warning-box {
+            background-color: rgba(255, 200, 200, 0.1);
+            border-left: 4px solid #ff6b6b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th,
+        table td {
+            border: 1px solid var(--border);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: var(--light-green);
+            color: var(--deep-green);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--deep-green);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--lemon-green);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--lemon-green);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .footer-section {
+                flex: 100%;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        /* TOC Navigation */
+        .toc {
+            background-color: var(--light-green);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            color: var(--deep-green);
+            margin-bottom: 15px;
+        }
+
+        .toc ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--deep-green);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: var(--lemon-green);
+            text-decoration: underline;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--deep-green);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 99;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--lemon-green);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before using our services at MadePetal Clinic and Spa.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#services">2. Services Overview</a></li>
+                    <li><a href="#appointments">3. Appointments & Cancellations</a></li>
+                    <li><a href="#payments">4. Payments & Pricing</a></li>
+                    <li><a href="#consent">5. Informed Consent & Medical Disclosure</a></li>
+                    <li><a href="#images">6. Image & Media Policy</a></li>
+                    <li><a href="#products">7. Product Sales & Delivery</a></li>
+                    <li><a href="#liability">8. Liability & Risk Acknowledgement</a></li>
+                    <li><a href="#privacy">9. Privacy & Confidentiality</a></li>
+                    <li><a href="#conduct">10. Client Conduct</a></li>
+                    <li><a href="#modifications">11. Modifications to Services</a></li>
+                    <li><a href="#termination">12. Termination of Services</a></li>
+                    <li><a href="#intellectual">13. Intellectual Property</a></li>
+                    <li><a href="#disputes">14. Dispute Resolution</a></li>
+                    <li><a href="#governing">15. Governing Law</a></li>
+                    <li><a href="#contact">16. Contact Information</a></li>
+                </ul>
+            </div>
+
+            <!-- Terms Sections -->
+            <div class="section" id="acceptance">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing, booking, or using any services, treatments, or products offered by MadePetal Clinic and
+                    Spa ("we," "our," or "us"), you agree to be bound by these Terms of Service. If you do not agree
+                    with any part of these terms, you must not use our services.</p>
+                <p>These terms apply to all visitors, users, clients, and others who access or use our services.</p>
+            </div>
+
+            <div class="section" id="services">
+                <h2>2. Services Overview</h2>
+                <p>MadePetal Clinic and Spa provides a comprehensive range of aesthetic, spa, and skincare services
+                    including but not limited to:</p>
+
+                <h3>Aesthetic Treatments</h3>
+                <ul>
+                    <li>Microblading, Microshading, and Ombre Brows</li>
+                    <li>Lip Blush Tattoo and other permanent makeup services</li>
+                    <li>Teeth Whitening and oral aesthetics</li>
+                    <li>Body Piercing services (ear, nose, belly button, dermal)</li>
+                    <li>Botox, Dermal Fillers, and facial contouring</li>
+                    <li>Microneedling, PRP treatments, and thread lifts</li>
+                    <li>Laser treatments (hair removal, skin resurfacing, tattoo removal)</li>
+                    <li>Chemical peels and hyperpigmentation treatments</li>
+                </ul>
+
+                <h3>Spa & Wellness Services</h3>
+                <ul>
+                    <li>Various facial treatments (basic, deep cleansing, anti-aging, etc.)</li>
+                    <li>Body treatments (scrubs, polishing, wraps, cellulite reduction)</li>
+                    <li>Massage therapies (Swedish, deep tissue, hot stone, aromatherapy)</li>
+                    <li>Pedicure services and detox therapies</li>
+                    <li>Sauna and steam therapy</li>
+                </ul>
+
+                <h3>Body Contouring & Sculpting</h3>
+                <ul>
+                    <li>Cavitation (ultrasonic fat melting)</li>
+                    <li>Radiofrequency body sculpting and skin tightening</li>
+                    <li>Cryolipolysis (fat freezing)</li>
+                    <li>Vacuum therapy and EMSculpt</li>
+                </ul>
+
+                <p>All services are performed by trained professionals, but individual results may vary.</p>
+            </div>
+
+            <div class="section" id="appointments">
+                <h2>3. Appointments & Cancellations</h2>
+
+                <h3>Booking Appointments</h3>
+                <p>Appointments can be made through our website, by phone, or in person. We recommend booking in advance
+                    to secure your preferred time slot.</p>
+
+                <h3>Cancellation Policy</h3>
+                <p>We require at least 24 hours notice for appointment cancellations or rescheduling. Late cancellations
+                    or no-shows may be subject to fees:</p>
+                <table>
+                    <tr>
+                        <th>Cancellation Timeframe</th>
+                        <th>Fee</th>
+                    </tr>
+                    <tr>
+                        <td>More than 24 hours before appointment</td>
+                        <td>No charge</td>
+                    </tr>
+                    <tr>
+                        <td>Less than 24 hours before appointment</td>
+                        <td>50% of service cost</td>
+                    </tr>
+                    <tr>
+                        <td>No-show (without any notice)</td>
+                        <td>100% of service cost</td>
+                    </tr>
+                </table>
+
+                <h3>Late Arrivals</h3>
+                <p>If you arrive late for your appointment, we will try to accommodate you but may need to shorten your
+                    treatment time to avoid delaying subsequent appointments.</p>
+            </div>
+
+            <div class="section" id="payments">
+                <h2>4. Payments & Pricing</h2>
+                <p>Payment is due at the time of service unless otherwise arranged. We accept cash, credit/debit cards,
+                    and approved electronic payment methods.</p>
+
+                <h3>Pricing</h3>
+                <p>All prices are subject to change without notice. Current pricing is available on our website or upon
+                    request at our clinic.</p>
+
+                <h3>Deposits</h3>
+                <p>For certain services or packages, a deposit may be required to secure your appointment. This deposit
+                    will be applied toward your final balance.</p>
+
+                <h3>Refunds</h3>
+                <p>Due to the custom nature of our services, we do not offer refunds for completed treatments. For
+                    product purchases, please refer to our return policy.</p>
+            </div>
+
+            <div class="section" id="consent">
+                <h2>5. Informed Consent & Medical Disclosure</h2>
+
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> Certain treatments may not be suitable for everyone. It is essential
+                        that you disclose your complete medical history, including any medications, allergies, or health
+                        conditions, during your consultation.</p>
+                </div>
+
+                <p>Prior to any treatment, you will be required to complete a consultation form and provide informed
+                    consent. This process ensures:</p>
+                <ul>
+                    <li>You understand the nature of the procedure</li>
+                    <li>You are aware of potential risks and side effects</li>
+                    <li>You have realistic expectations about outcomes</li>
+                    <li>You acknowledge that individual results may vary</li>
+                </ul>
+
+                <p>We reserve the right to refuse service if we determine that a treatment may pose a risk to your
+                    health or if you have not provided accurate medical information.</p>
+            </div>
+
+            <div class="section" id="images">
+                <h2>6. Image & Media Policy</h2>
+
+                <h3>Session Photography</h3>
+                <p>For professional documentation, progress tracking, and treatment planning, we may take photographs or
+                    videos during your sessions. These images are stored securely as part of your client record.</p>
+
+                <h3>Marketing Use</h3>
+                <p>We will always request your explicit written consent before using any images or media for promotional
+                    or educational purposes. You have the right to:</p>
+                <ul>
+                    <li>Specify which images may be used</li>
+                    <li>Limit the contexts in which they appear</li>
+                    <li>Withdraw consent at any time</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Consent Withdrawal:</strong> You may withdraw your consent for the use of your images at
+                        any time by contacting us in writing. Upon receipt of your request, we will cease using your
+                        images in future marketing materials.</p>
+                </div>
+
+                <h3>Client Photography</h3>
+                <p>For the privacy and comfort of all clients, personal photography or recording during treatments is
+                    not permitted without prior authorization.</p>
+            </div>
+
+            <div class="section" id="products">
+                <h2>7. Product Sales & Delivery</h2>
+
+                <h3>Product Information</h3>
+                <p>We offer a range of premium skincare products formulated for various skin types and concerns. While
+                    we strive to provide accurate product information, we recommend patch testing new products and
+                    consulting with our skincare specialists.</p>
+
+                <h3>Purchases & Returns</h3>
+                <p>Product purchases are final once opened due to hygiene reasons. Unopened products in original
+                    packaging may be returned within 14 days of purchase with a receipt.</p>
+
+                <h3>Global Delivery</h3>
+                <p>We offer international shipping for our product line. Shipping costs and delivery times vary by
+                    location. Customers are responsible for any customs duties, taxes, or import fees applicable in
+                    their country.</p>
+
+                <div class="warning-box">
+                    <p><strong>Important:</strong> We are not responsible for products damaged during shipping or delays
+                        caused by customs processing. Please ensure you provide accurate shipping information.</p>
+                </div>
+            </div>
+
+            <div class="section" id="liability">
+                <h2>8. Liability & Risk Acknowledgement</h2>
+
+                <p>While we take every precaution to ensure safe treatments, you acknowledge that all aesthetic and spa
+                    services carry inherent risks, including but not limited to:</p>
+                <ul>
+                    <li>Allergic reactions to products or materials</li>
+                    <li>Temporary redness, swelling, or discomfort</li>
+                    <li>Variations in individual healing responses</li>
+                    <li>Rare complications specific to certain procedures</li>
+                </ul>
+
+                <p>By using our services, you agree that MadePetal Clinic and Spa, its employees, and affiliates shall
+                    not be held liable for:</p>
+                <ul>
+                    <li>Any adverse reactions resulting from undisclosed medical conditions or medications</li>
+                    <li>Unsatisfactory results due to individual variations in response to treatment</li>
+                    <li>Complications arising from failure to follow aftercare instructions</li>
+                    <li>Incidental or consequential damages</li>
+                </ul>
+
+                <p>Our maximum liability for any claim relating to our services shall not exceed the amount paid for the
+                    specific service in question.</p>
+            </div>
+
+            <div class="section" id="privacy">
+                <h2>9. Privacy & Confidentiality</h2>
+
+                <p>We are committed to protecting your privacy and confidentiality. All client information is handled in
+                    accordance with our Privacy Policy, which outlines:</p>
+                <ul>
+                    <li>How we collect, use, and store your personal information</li>
+                    <li>Your rights regarding your data</li>
+                    <li>Our security measures to protect your information</li>
+                </ul>
+
+                <p>Your medical information and treatment records are kept strictly confidential and are only accessible
+                    to authorized personnel directly involved in your care.</p>
+
+                <p>For full details, please refer to our separate <a href="#">Privacy Policy</a>.</p>
+            </div>
+
+            <div class="section" id="conduct">
+                <h2>10. Client Conduct</h2>
+
+                <p>We strive to maintain a professional, respectful, and safe environment for all clients and staff. We
+                    reserve the right to refuse service to anyone who:</p>
+                <ul>
+                    <li>Displays disrespectful, abusive, or inappropriate behavior</li>
+                    <li>Arrives under the influence of alcohol or drugs</li>
+                    <li>Fails to comply with safety protocols or staff instructions</li>
+                    <li>Otherwise disrupts the clinic environment</li>
+                </ul>
+
+                <p>In such cases, services may be terminated immediately without refund.</p>
+            </div>
+
+            <div class="section" id="modifications">
+                <h2>11. Modifications to Services</h2>
+
+                <p>We continually update and improve our service offerings. We reserve the right to:</p>
+                <ul>
+                    <li>Modify, discontinue, or replace any service or product</li>
+                    <li>Change pricing without prior notice</li>
+                    <li>Update techniques, equipment, or products used in treatments</li>
+                </ul>
+
+                <p>We will make reasonable efforts to notify clients of significant changes that may affect scheduled
+                    appointments or ongoing treatment plans.</p>
+            </div>
+
+            <div class="section" id="termination">
+                <h2>12. Termination of Services</h2>
+
+                <p>We reserve the right to terminate or suspend access to our services immediately, without prior notice
+                    or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+
+                <p>All provisions of the Terms which by their nature should survive termination shall survive
+                    termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity,
+                    and limitations of liability.</p>
+            </div>
+
+            <div class="section" id="intellectual">
+                <h2>13. Intellectual Property</h2>
+
+                <p>All content included on our website, in marketing materials, and within our clinic, such as text,
+                    graphics, logos, images, and treatment methodologies, is the property of MadePetal Clinic and Spa or
+                    its content suppliers and protected by intellectual property laws.</p>
+
+                <p>You may not reproduce, distribute, or create derivative works from any content without our express
+                    written permission.</p>
+            </div>
+
+            <div class="section" id="disputes">
+                <h2>14. Dispute Resolution</h2>
+
+                <p>In the event of any dispute or claim relating to our services, we encourage you to contact us first
+                    to seek a resolution. Most concerns can be resolved quickly and satisfactorily through direct
+                    communication.</p>
+
+                <p>If a dispute cannot be resolved informally, you agree to attempt mediation before pursuing other
+                    remedies. Any mediation shall take place in Lagos, Nigeria, and shall be conducted by a mutually
+                    agreed-upon mediator.</p>
+            </div>
+
+            <div class="section" id="governing">
+                <h2>15. Governing Law</h2>
+
+                <p>These Terms shall be governed and construed in accordance with the laws of Nigeria, without regard to
+                    its conflict of law provisions.</p>
+
+                <p>Any legal suit, action, or proceeding arising out of, or related to, these Terms or the services
+                    shall be instituted exclusively in the courts of Lagos, Nigeria.</p>
+            </div>
+
+            <div class="section" id="contact">
+                <h2>16. Contact Information</h2>
+
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
+
+                <p><strong>MadePetal Clinic and Spa</strong><br>
+                    Same Building with Trust Micro-Finance Bank, Opposite The Palms, Km1, Magboro, Lagos-Ibadan Express
+                    Way<br>
+                    madepetalng@gmail.com<br>
+                    08130586133</p>
+
+                <p><strong>Effective Date:</strong> 1st October, 2025<br>
+                    <strong>Last Updated:</strong> 27th September, 2025
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Back to top button functionality
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.querySelector(".back-to-top").style.display = "block";
+            } else {
+                document.querySelector(".back-to-top").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Smooth scrolling for table of contents links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

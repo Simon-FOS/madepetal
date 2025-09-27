@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
 
+            const form_url = contactForm.action
+
+
+
             // Simple validation - check if required fields are filled
             if (!name || !email || !message) {
                 alert('Please fill in all required fields.');
@@ -37,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // If everything is valid, proceed with form submission
-            submitContactForm(name, email, phone, service, message);
+            submitContactForm(form_url, { name, email, phone, service, message });
         });
     }
 
@@ -59,14 +63,34 @@ document.addEventListener('DOMContentLoaded', function () {
      * @param {string} service - Selected service
      * @param {string} message - User's message
      */
-    function submitContactForm(name, email, phone, service, message) {
+    function submitContactForm(form_url, { name, email, phone, service, message }) {
         // In a real implementation, you would send this data to your server
         // For now, we'll just show a success message
 
-        console.log('Form data:', { name, email, phone, service, message });
 
+
+        let option = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ name, email, phone, service, message })
+        }
+
+        fetch(form_url, option)
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                console.log(data)
+                alert(data);
+            })
+            .catch((err) => {
+                alert(err.message);
+
+                console.log(err.message)
+            });
         // Show success message to user
-        alert('Thank you for your message! We will get back to you soon.');
 
         // Reset the form
         contactForm.reset();

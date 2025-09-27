@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadePetal Clinic and Spa - Client Intake Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --deep-green: #1a5d1a;
+            --lemon-green: #a3de83;
+            --yellow: #f7ea00;
+            --light-yellow: #fff9c4;
+            --light-green: #e8f5e9;
+        }
+
+        body {
+            background-color: var(--light-green);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--lemon-green) 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 2px solid var(--lemon-green);
+        }
+
+        .section-title {
+            color: var(--deep-green);
+            border-bottom: 2px solid var(--lemon-green);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--lemon-green) 100%);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, var(--lemon-green) 0%, var(--deep-green) 100%);
+        }
+
+        .contact-info {
+            background-color: var(--light-yellow);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 2rem;
+            border: 1px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .form-check-label {
+            cursor: pointer;
+        }
+
+        .rating-option {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .rating-option:hover {
+            transform: scale(1.05);
+            border-color: var(--lemon-green);
+        }
+
+        .rating-option.selected {
+            background-color: var(--light-yellow);
+            border-color: var(--yellow);
+        }
+
+        .form-control:focus,
+        .form-check-input:focus {
+            border-color: var(--lemon-green);
+            box-shadow: 0 0 0 0.2rem rgba(163, 222, 131, 0.25);
+        }
+
+        .form-check-input:checked {
+            background-color: var(--deep-green);
+            border-color: var(--deep-green);
+        }
+
+        .whatsapp-icon {
+            color: #25D366;
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .floral-decoration {
+            color: var(--lemon-green);
+            opacity: 0.7;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+
+        .required::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header text-center">
+        <div class="container">
+            <div class="logo">MadePetal</div>
+            <div class="tagline">CLINIC AND SPA</div>
+            <div class="mt-2">
+                <i class="floral-decoration fas fa-spa"></i>
+                <i class="floral-decoration fas fa-leaf"></i>
+                <i class="floral-decoration fas fa-seedling"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-container">
+                    <h2 class="text-center mb-4" style="color: var(--deep-green);">CLIENT INTAKE FORM</h2>
+
+                    <form id="clientIntakeForm">
+                        <!-- Personal Information Section -->
+                        <div class="mb-4">
+                            <h4 class="section-title">Personal Information</h4>
+
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label required">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mobileNumber" class="form-label required">WhatsApp / Mobile Number</label>
+                                <input type="tel" class="form-control" id="mobileNumber" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="instagramHandle" class="form-label">Instagram Handle (optional)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">@</span>
+                                    <input type="text" class="form-control" id="instagramHandle">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label required">Gender</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="male"
+                                            value="Male" required>
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="female"
+                                            value="Female" required>
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="birthday" class="form-label required">Birthday (DD/MM)</label>
+                                <input type="text" class="form-control" id="birthday" placeholder="DD/MM" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label required">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+
+                        <!-- How did you hear about us? Section -->
+                        <div class="mb-4">
+                            <h4 class="section-title">How did you hear about us?</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="instagram"
+                                            value="Instagram">
+                                        <label class="form-check-label" for="instagram">Instagram</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="facebook" value="Facebook">
+                                        <label class="form-check-label" for="facebook">Facebook</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="friendReferral"
+                                            value="Friend/Referral">
+                                        <label class="form-check-label" for="friendReferral">Friend / Referral</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="walkIn" value="Walk-in">
+                                        <label class="form-check-label" for="walkIn">Walk-in</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="tiktok" value="Tiktok">
+                                        <label class="form-check-label" for="tiktok">Tiktok</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="otherCheckbox">
+                                        <label class="form-check-label" for="otherCheckbox">Other:</label>
+                                        <input type="text" class="form-control mt-1" id="otherInput"
+                                            placeholder="Please specify">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Session Details Section -->
+                        <div class="mb-4">
+                            <h4 class="section-title">Session Details</h4>
+                            <div class="mb-3">
+                                <label for="sessionService" class="form-label required">What session/service did you
+                                    book today?</label>
+                                <input type="text" class="form-control" id="sessionService" required>
+                            </div>
+                        </div>
+
+                        <!-- Age Range Section -->
+                        <div class="mb-4">
+                            <h4 class="section-title">Age Range</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="ageRange" id="age15_35"
+                                            value="15-35" required>
+                                        <label class="form-check-label" for="age15_35">15–35</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="ageRange" id="age36_50"
+                                            value="36-50" required>
+                                        <label class="form-check-label" for="age36_50">36–50</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="ageRange" id="age51_70"
+                                            value="51-70" required>
+                                        <label class="form-check-label" for="age51_70">51–70</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="ageRange" id="age70plus"
+                                            value="70+" required>
+                                        <label class="form-check-label" for="age70plus">70+</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Satisfaction Feedback Section -->
+                        <div class="mb-4">
+                            <h4 class="section-title">Satisfaction Feedback</h4>
+                            <p class="form-label required">How would you rate your overall experience today?</p>
+                            <div class="row text-center">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="rating-option p-3 border rounded" data-rating="Good">
+                                        <i class="fas fa-smile fa-2x mb-2" style="color: var(--lemon-green);"></i>
+                                        <div>Good</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="rating-option p-3 border rounded" data-rating="Very Good">
+                                        <i class="fas fa-grin fa-2x mb-2" style="color: var(--deep-green);"></i>
+                                        <div>Very Good</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="rating-option p-3 border rounded" data-rating="Lovely">
+                                        <i class="fas fa-heart fa-2x mb-2" style="color: #e91e63;"></i>
+                                        <div>Lovely</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="rating-option p-3 border rounded" data-rating="Excellent">
+                                        <i class="fas fa-star fa-2x mb-2" style="color: var(--yellow);"></i>
+                                        <div>Excellent</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="satisfactionRating" required>
+                        </div>
+
+                        <!-- Suggestions Section -->
+                        <div class="mb-4">
+                            <h4 class="section-title">Any suggestions or comments on how we can serve you better?</h4>
+                            <textarea class="form-control" id="suggestions" rows="4"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-submit btn-lg">
+                                <i class="whatsapp-icon fab fa-whatsapp"></i>Submit via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info text-center mt-4">
+                        <p class="mb-1"><i class="fas fa-envelope me-2" style="color: var(--deep-green);"></i> <a
+                                href="mailto:madepetaling@gmail.com">madepetaling@gmail.com</a></p>
+                        <p class="mb-0"><i class="fas fa-phone me-2" style="color: var(--deep-green);"></i> <a
+                                href="tel:08130586133">08130586133</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Success Message -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: var(--deep-green); color: white;">
+                    <h5 class="modal-title" id="successModalLabel">Form Submitted Successfully!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your form has been prepared for WhatsApp submission.</p>
+                    <p>Click the button below to send it directly to MadePetal via WhatsApp.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a id="whatsappSend" class="btn" style="background-color: #25D366; color: white;" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>Send via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Rating selection functionality
+            const ratingOptions = document.querySelectorAll('.rating-option');
+            const satisfactionRating = document.getElementById('satisfactionRating');
+
+            ratingOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    // Remove selected class from all options
+                    ratingOptions.forEach(opt => opt.classList.remove('selected'));
+
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+
+                    // Set the hidden input value
+                    satisfactionRating.value = this.getAttribute('data-rating');
+                });
+            });
+
+            // Form submission
+            const form = document.getElementById('clientIntakeForm');
+            const whatsappSend = document.getElementById('whatsappSend');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Basic validation
+                if (!satisfactionRating.value) {
+                    alert('Please select a satisfaction rating.');
+                    return;
+                }
+
+                // Collect form data
+                const formData = collectFormData();
+
+                // Generate PDF
+                generatePDF(formData);
+
+                // Prepare WhatsApp message
+                const whatsappMessage = generateWhatsAppMessage(formData);
+                const whatsappUrl = `https://wa.me/2348130586133?text=${encodeURIComponent(whatsappMessage)}`;
+
+                // Set the WhatsApp URL
+                whatsappSend.href = whatsappUrl;
+
+                // Show success modal
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+            });
+
+            // Birthday input formatting (DD/MM)
+            const birthdayInput = document.getElementById('birthday');
+
+            birthdayInput.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, '');
+
+                if (value.length > 2) {
+                    value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                }
+
+                e.target.value = value;
+            });
+
+            // Other checkbox functionality
+            const otherCheckbox = document.getElementById('otherCheckbox');
+            const otherInput = document.getElementById('otherInput');
+
+            otherCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    otherInput.disabled = false;
+                    otherInput.focus();
+                } else {
+                    otherInput.disabled = true;
+                    otherInput.value = '';
+                }
+            });
+
+            // Disable other input initially if checkbox is not checked
+            if (!otherCheckbox.checked) {
+                otherInput.disabled = true;
+            }
+
+            // Function to collect form data
+            function collectFormData() {
+                const data = {};
+
+                // Personal Information
+                data.fullName = document.getElementById('fullName').value;
+                data.mobileNumber = document.getElementById('mobileNumber').value;
+                data.instagramHandle = document.getElementById('instagramHandle').value;
+                data.gender = document.querySelector('input[name="gender"]:checked')?.value || '';
+                data.birthday = document.getElementById('birthday').value;
+                data.email = document.getElementById('email').value;
+
+                // How did you hear about us?
+                const referralSources = [];
+                if (document.getElementById('instagram').checked) referralSources.push('Instagram');
+                if (document.getElementById('facebook').checked) referralSources.push('Facebook');
+                if (document.getElementById('friendReferral').checked) referralSources.push('Friend/Referral');
+                if (document.getElementById('walkIn').checked) referralSources.push('Walk-in');
+                if (document.getElementById('tiktok').checked) referralSources.push('Tiktok');
+                if (document.getElementById('otherCheckbox').checked && document.getElementById('otherInput').value) {
+                    referralSources.push('Other: ' + document.getElementById('otherInput').value);
+                }
+                data.referralSources = referralSources.join(', ');
+
+                // Session Details
+                data.sessionService = document.getElementById('sessionService').value;
+
+                // Age Range
+                data.ageRange = document.querySelector('input[name="ageRange"]:checked')?.value || '';
+
+                // Satisfaction Feedback
+                data.satisfactionRating = satisfactionRating.value;
+
+                // Suggestions
+                data.suggestions = document.getElementById('suggestions').value;
+
+                return data;
+            }
+
+            // Function to generate WhatsApp message
+            function generateWhatsAppMessage(data) {
+                let message = `*MadePetal Clinic and Spa - Client Intake Form*\n\n`;
+                message += `*Personal Information:*\n`;
+                message += `Full Name: ${data.fullName}\n`;
+                message += `Mobile: ${data.mobileNumber}\n`;
+                message += `Instagram: ${data.instagramHandle || 'N/A'}\n`;
+                message += `Gender: ${data.gender}\n`;
+                message += `Birthday: ${data.birthday}\n`;
+                message += `Email: ${data.email}\n\n`;
+
+                message += `*Referral Source:* ${data.referralSources || 'N/A'}\n\n`;
+
+                message += `*Session Details:*\n`;
+                message += `Service Booked: ${data.sessionService}\n\n`;
+
+                message += `*Age Range:* ${data.ageRange}\n\n`;
+
+                message += `*Satisfaction Rating:* ${data.satisfactionRating}\n\n`;
+
+                message += `*Suggestions/Comments:*\n${data.suggestions || 'N/A'}\n\n`;
+
+                message += `_Form submitted via website_`;
+
+                return message;
+            }
+
+            // Function to generate PDF
+            function generatePDF(data) {
+                // In a real implementation, you would use jsPDF to create a PDF
+                // For this example, we'll just log that we would generate a PDF
+                console.log('PDF would be generated with the following data:', data);
+
+                // Example of how you might generate a PDF (commented out for simplicity)
+                /*
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                
+                doc.setFontSize(16);
+                doc.text('MadePetal Clinic and Spa - Client Intake Form', 20, 20);
+                
+                doc.setFontSize(12);
+                doc.text(`Full Name: ${data.fullName}`, 20, 40);
+                doc.text(`Mobile: ${data.mobileNumber}`, 20, 50);
+                // ... continue adding all form data
+                
+                // Save the PDF
+                doc.save('MadePetal-Intake-Form.pdf');
+                */
+            }
+        });
+    </script>
+</body>
+
+</html>
